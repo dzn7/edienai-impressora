@@ -86,7 +86,7 @@ app.on('window-all-closed', () => {
 // Obter lista de impressoras disponíveis
 ipcMain.handle('obter-impressoras', async (): Promise<PrinterInfo[]> => {
   if (!janelaprincipal) return []
-  return janelaprincipal.webContents.getPrinters()
+  return await janelaprincipal.webContents.getPrintersAsync()
 })
 
 // Obter configurações salvas
