@@ -3,7 +3,7 @@
  * Gera o HTML formatado para impressão térmica
  */
 
-import { Pedido, ItemPedido, TipoImpressao, ConfiguracoesApp, DadosEdicao, OpcaoEntrega } from '../tipos'
+import { Pedido, TipoImpressao, ConfiguracoesApp, DadosEdicao, OpcaoEntrega } from '../tipos'
 
 // Mapeamento de tamanhos de fonte
 const TAMANHOS_FONTE = {
