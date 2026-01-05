@@ -1,0 +1,50 @@
+appId: com.edienai.printer
+productName: Edienai Printer
+copyright: Copyright © 2026 Edienai Lanches
+
+directories:
+  output: release
+  buildResources: assets
+
+files:
+  - dist/**/*
+  - assets/**/*
+
+extraResources:
+  - from: assets
+    to: assets
+
+win:
+  target:
+    - target: nsis
+      arch:
+        - x64
+        - ia32
+  icon: assets/icon.ico
+  publisherName: Edienai Lanches
+
+mac:
+  target:
+    - dmg
+  icon: assets/icon.icns
+  category: public.app-category.utilities
+
+linux:
+  target:
+    - AppImage
+  icon: assets/icon.png
+  category: Utility
+
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  installerIcon: assets/icon.ico
+  uninstallerIcon: assets/icon.ico
+  license: LICENSE.txt
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+
+publish:
+  provider: github
+  owner: edienai
+  repo: edienai-printer
